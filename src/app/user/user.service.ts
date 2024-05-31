@@ -66,7 +66,7 @@ export class UserService {
     }
   }
 
-  public  register(name: string, email: string, password: string) {
+  public  register(name: string, email: string, password: string,mobnum:number) {
     try {
            this.result = firstValueFrom(
             this.http.post<User>(
@@ -75,6 +75,7 @@ export class UserService {
                 name,
                 email,
                 password,
+                mobnum
               },
               requestOptions
             )

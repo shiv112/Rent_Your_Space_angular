@@ -49,6 +49,7 @@ export class RegisterComponent implements OnInit {
           ],
         ],
         confirm: ['', Validators.required],
+        mobnum:['', Validators.required],
         termService: [false, Validators.required],
       },
       {
@@ -64,8 +65,9 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {}
 
   public submit() {
-    const { name, email, password } = this.registerForm.value;
-    this.user.register(name, email, password);
+    console.log(this.registerForm.value);
+    const { name, email, password,mobnum} = this.registerForm.value;
+    this.user.register(name, email, password,mobnum);
    
   }
 

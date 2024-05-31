@@ -1,6 +1,6 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu class="max-w-400" contentId="main-content" type="overlay">
+    <!-- <ion-menu class="max-w-400" contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>
@@ -13,7 +13,6 @@
               </div>
             </div>
           </ion-list-header>
-          <!-- <ion-note></ion-note> -->
           <ion-menu-toggle
             auto-hide="false"
             *ngFor="let p of appPages; let i = index"
@@ -31,7 +30,6 @@
                 [md]="p.icon + '-sharp'"
               ></ion-icon>
               <ion-label>{{ p.title || "Menu Item" }}</ion-label>
-              <!-- badge counter for unread messages -->
               <ion-badge slot="end" *ngIf="p.title === 'Enquiries' && unreadEnquiries">
                 {{ unreadEnquiries }}
               </ion-badge>
@@ -73,7 +71,7 @@
           </ion-menu-toggle>
         </ion-list>
       </ion-content>
-    </ion-menu>
+    </ion-menu> -->
     <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
 </ion-app>
